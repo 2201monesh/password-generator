@@ -45,10 +45,13 @@
     /* outline: none; */
     background-color: transparent;
     margin-left: 25px;
+    color: white;
 }
 
 .icon-top{
     margin-right: 25px;
+    color: white;
+    cursor: pointer;
 }
 
 .inner-box-down{

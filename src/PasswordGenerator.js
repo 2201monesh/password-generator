@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function PasswordGenerator({ includeUppercase, includeLowercase, includeNumbers, includeSymbols, onPasswordGenerate }) {
 
-    const [generatedPassword, setGeneratedPassword] = useState('');
+    // const [generatedPassword, setGeneratedPassword] = useState('');
 
   const generatePassword = () => {
     
@@ -19,10 +19,10 @@ function PasswordGenerator({ includeUppercase, includeLowercase, includeNumbers,
     if (includeSymbols) validChars += symbolChars;
 
     if (!validChars) {
-      return 'Please select at least one criteria.';
+      return 'select Checkbox';
     }
 
-    // Password length (you can customize this)
+    // Password length (can be customized)
     const passwordLength = 10;
 
     let password = '';
@@ -31,7 +31,7 @@ function PasswordGenerator({ includeUppercase, includeLowercase, includeNumbers,
       password += validChars.charAt(randomIndex);
     }
 
-    setGeneratedPassword(password);
+    // setGeneratedPassword(password);
     onPasswordGenerate(password);
   };
 

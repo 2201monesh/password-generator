@@ -1,11 +1,10 @@
 import CheckBox from "./CheckBox";
 import { TbRectangleVertical } from 'react-icons/tb';
 import { TbRectangleVerticalFilled } from 'react-icons/tb';
-import { BsArrowRightShort } from 'react-icons/bs';
 import { useState } from "react";
 import PasswordGenerator from "./PasswordGenerator";
 
-function PasswordForm() {
+function PasswordForm({onPasswordGeneration}) {
 
     const[firstCheckbox, setFirstcheckbox] = useState(false);
     const[secondCheckbox, setSecondcheckbox] = useState(false);
@@ -31,8 +30,8 @@ function PasswordForm() {
 
     const handlePasswordGenerate = (password) => {
         setGeneratedPassword(password);
-        console.log(password);
     }
+    onPasswordGeneration(generatedPassword);
 
   return (
     <div className="inner-box-down">
